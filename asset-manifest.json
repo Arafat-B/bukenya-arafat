@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/bukenya-arafat/static/css/main.3237c618.css",
+    "main.js": "/bukenya-arafat/static/js/main.1cccf614.js",
+    "static/media/profile.png": "/bukenya-arafat/static/media/profile.ff920aabffebabcf60c4.png",
+    "index.html": "/bukenya-arafat/index.html",
+    "main.3237c618.css.map": "/bukenya-arafat/static/css/main.3237c618.css.map",
+    "main.1cccf614.js.map": "/bukenya-arafat/static/js/main.1cccf614.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3237c618.css",
+    "static/js/main.1cccf614.js"
+  ]
+}
