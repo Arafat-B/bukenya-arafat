@@ -1,0 +1,102 @@
+.kai__section__margin{
+  margin: 4rem;
+}
+
+.kai-heading{
+  color: white;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 25px;
+  text-transform: capitalize;
+
+}
+
+.kai__aboutme-text-heading{
+  display:flex;
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0.04em;
+  margin-top: 8rem;
+  padding-left: 8rem;
+  color: white;
+  padding-top: 1rem;
+}
+
+.kai__aboutme-holder{
+  display: flex;
+}
+.kai__aboutme-text-des{
+  display:flex;
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0.04em;
+  margin-top: 1rem;
+  padding-left: 8rem;
+  
+  color: white;
+}
+
+.kai__about-content__images{
+  padding-left: 117.35rem;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.kai__about-content__images img{
+  width: 84px; 
+  height: auto;
+}
+
+
+/*media queries*/
+@media screen and (max-width: 1050px) {
+  .kai__aboutme-text-heading {
+      padding-left: 0; /* Reset padding for smaller screens */
+  }
+
+  .kai__aboutme-text-des {
+      padding-left: 0; /* Reset padding for smaller screens */
+  }
+
+  .kai__about-content__images {
+      padding-left: 8rem; /* Adjust as needed for smaller screens */
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .kai__about-content__images {
+      padding-left: 4rem; /* Adjust as needed for smaller screens */
+  }
+  .kai-heading{
+
+    padding-top: 8px;
+  }
+  .kai__about-content__images {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .kai__section__margin {
+      margin-left: 2rem; 
+      margin-right: 2rem;/* Adjust as needed for smaller screens */
+      margin-top: 0;
+  }
+
+  .kai-heading{
+
+    padding-top: 2px;
+  }
+
+  .kai__aboutme-text-heading{
+    margin-top: 8px;
+  }
+
+  .kai__about-content__images {
+    display: none;
+  }
+}

@@ -1,0 +1,237 @@
+.design__container {
+  margin: 4rem;
+}
+
+.design__container-slogan {
+  display: flex;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0.04em;
+  margin-top: 8rem;
+  color: white;
+  padding-top: 1rem;
+}
+
+.skills__container {
+  display: flex;
+  align-items: center;
+}
+
+.skill__container-pallets {
+  display: flex;
+  color: rgb(255, 255, 255);
+  font-family: var(--font-family);
+  gap: 10px;
+  padding-left: 8rem;
+  padding-top: 4rem;
+  justify-content: center;
+  align-self: center; /* Center the skills horizontally */
+ 
+
+}
+
+.frontend,
+.backend,
+.cloud,
+.version{
+  padding-top: 6rem;
+  padding-left: 1rem;
+}
+
+.skill,
+.skills-display {
+  border-radius: 20px;
+  background-color: #d9d9d9;
+  align-self: center;
+  width: 150px;
+  height: 300px;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 30px 20px 51px;
+  transition: background-color 0.3s ease, opacity 0.3s ease; /* Added transition for smoother effect */
+  position: relative; /* Added relative positioning */
+  border-bottom: 1px solid rgb(255, 0, 0);
+  border-right: 1px solid red;
+}
+
+.skills-display {
+  width: 200px;
+  height: 300px;
+  margin-left: 13.5rem;
+  opacity: 0; /* Initially set to invisible */
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.skill:hover {
+  background-color: black;
+}
+
+.skill:hover ~ .skills-display {
+  opacity: 1; /* Set to visible on hover */
+  background-color: black; /* Set green color on hover */
+}
+
+.skills-content {
+  color: white;
+  line-height: 25px;
+  display: none; /* Initially set to hidden */
+  position: absolute; /* Added absolute positioning */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.skill.skill-frontend:hover ~ .skills-display .frontendskills,
+.skill.skill-backend:hover ~ .skills-display .backendskills,
+.skill.skills-cloud:hover ~ .skills-display .cloudskills,
+.skill.skills-version:hover ~ .skills-display .versionskills {
+  display: block; /* Set to visible on hover */
+}
+
+
+
+@media screen and (max-width: 1050px) {
+  .design__container-slogan {
+    margin-top: 4rem; /* Adjust margin-top for smaller screens */
+  }
+
+  .skills__container {
+    flex-direction: column; /* Stack skills vertically on smaller screens */
+  }
+
+  .skill__container-pallets {
+    padding-left: 0; /* Remove left padding on smaller screens */
+  }
+
+  .skills-display {
+    margin-left: 0; /* Remove left margin on smaller screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ... previous styles ... */
+
+/* Media Queries */
+
+@media screen and (max-width: 650px) {
+  .design__container-slogan {
+    margin-top: 2rem; /* Further adjust margin-top for smaller screens */
+    padding-bottom: 1rem; /* Add padding at the bottom */
+    position: relative; /* Set position to relative */
+    z-index: 1; /* Set a higher z-index to keep it above other elements */
+  }
+
+  .skill__container-pallets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack skills vertically on smaller screens */
+    gap: 20px; /* Add gap between skills on smaller screens */
+    position: relative; /* Set position to relative for absolute positioning of .skills-display */
+  }
+
+  .skills-display {
+    width: 200px; /* Set a fixed width for .skills-display */
+    height: 300px; /* Set a fixed height for .skills-display */
+    position: absolute; /* Set position to absolute for overlay effect */
+    top: calc(50% + 10rem);
+    bottom: calc(50% + 10rem);  /* Position at the vertical center of the container with padding */
+    left: 50%; /* Position at the horizontal center of the container */
+    transform: translate(-50%, -50%); /* Center the .skills-display */
+    opacity: 0; /* Initially set to invisible */
+    transition: opacity 0.3s ease; /* Added transition for smoother effect */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    z-index: 0; /* Set a lower z-index to keep it below other elements */
+  }
+
+  .skills-display .skills-content {
+    text-align: center; /* Center the text within .skills-content */
+  }
+
+  .skill__container-pallets:hover .skills-display {
+    opacity: 1; /* Set to visible on hover */
+    background-color: black; /* Set background color on hover */
+  }
+
+  .skill__container-pallets:hover .skill {
+    display: none; /* Hide the corresponding skill__container-pallets on hover */
+  }
+
+  .skill-frontend:hover .skills-display .frontendskills,
+  .skill-backend:hover .skills-display .backendskills,
+  .skills-cloud:hover .skills-display .cloudskills,
+  .skills-version:hover .skills-display .versionskills {
+    display: block; /* Set to visible on hover */
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .design__container-slogan {
+    margin-top: 1rem; /* Further adjust margin-top for smaller screens */
+    padding-bottom: 1rem; /* Add padding at the bottom */
+  }
+
+  .skill__container-pallets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack skills vertically on smaller screens */
+    gap: 20px; /* Add gap between skills on smaller screens */
+    position: relative; /* Set position to relative for absolute positioning of .skills-display */
+  }
+
+  .skills-display {
+    width: 200px; /* Set a fixed width for .skills-display */
+    height: 300px; /* Set a fixed height for .skills-display */
+    position: absolute; /* Set position to absolute for overlay effect */
+    top: calc(50% + 10rem);
+    bottom: calc(50% + 10rem); /* Position at the vertical center of the container with padding */
+    left: 50%; /* Position at the horizontal center of the container */
+    transform: translate(-50%, -50%); /* Center the .skills-display */
+    opacity: 0; /* Initially set to invisible */
+    transition: opacity 0.3s ease; /* Added transition for smoother effect */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    z-index: 0; /* Set a lower z-index to keep it below other elements */
+  }
+
+  .skills-display .skills-content {
+    text-align: center; /* Center the text within .skills-content */
+  }
+
+  .skill__container-pallets:hover .skills-display {
+    opacity: 1; /* Set to visible on hover */
+    background-color: black; /* Set background color on hover */
+  }
+
+  .skill__container-pallets:hover .skill {
+    display: none; /* Hide the corresponding skill__container-pallets on hover */
+  }
+
+  .skill-frontend:hover .skills-display .frontendskills,
+  .skill-backend:hover .skills-display .backendskills,
+  .skills-cloud:hover .skills-display .cloudskills,
+  .skills-version:hover .skills-display .versionskills {
+    display: block; /* Set to visible on hover */
+  }
+}
